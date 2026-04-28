@@ -1,7 +1,6 @@
 """
 COMP1110 Group D12 - Personal Budget Assistant
 """
-
 import os
 from datetime import datetime, timedelta
 
