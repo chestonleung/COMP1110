@@ -50,11 +50,29 @@ def load_transactions():
     return transactions
 
 
+def is_valid_date(date_str):
+    try:
+        datetime.strptime(date_str, "%Y-%m-%d")
+        return True
+    except ValueError:
+        return False
+
+
 def add_transaction(transactions):
     print("\n--- Adding Transaction ---")
-    try:
+    
+    while True:
         date = input("Date (YYYY-MM-DD): ")
+        if is_valid_date(date):
+            break
+        else:
+            print("Invalid date format or non-existent date. Please use YYYY-MM-DD (e.g., 2025-03-20).")
+    
+    try:
         amount = float(input("Amount: "))
+        if amount <= 0:
+            print("Amount must be a positive number.")
+            return
         category = input("Category (food, transport, shopping, etc.): ")
         description = input("Description: ")
         t = Transaction(date, amount, category, description)
@@ -96,7 +114,7 @@ def budget_from_line(line):
     parts = line.strip().split("|")
     if len(parts) == 4:
         enabled = (parts[3] == "True")
-        return BudgetRule(parts[0], parts[1], float(parts[2]), enabled)
+        return BudgetRule(parts[0], parts[1].lower(), float(parts[2]), enabled)
     return None
 
 
@@ -123,9 +141,18 @@ def load_budgets():
 def add_budget(budgets):
     print("\n--- Adding Budget Rule ---")
     category = input("Category: ")
-    period = input("Period (daily/weekly/monthly): ")
+    valid_periods = ["daily", "weekly", "monthly"]
+    while True:
+        period = input("Period (daily/weekly/monthly): ").strip().lower()
+        if period in valid_periods:
+            break
+        else:
+            print(f"Invalid period. Please choose from {', '.join(valid_periods)}.")
     try:
         threshold = float(input("Budget Limit: "))
+        if threshold <= 0:
+            print("Budget limit must be a positive number.")
+            return
         b = BudgetRule(category, period, threshold)
         budgets.append(b)
         save_budgets(budgets)
@@ -184,59 +211,74 @@ def get_spent_in_period(transactions, category, start_date, end_date):
     return total
 
 
+def get_week_start(date_str):
+    dt = datetime.strptime(date_str, "%Y-%m-%d")
+    start = dt - timedelta(days=dt.weekday())
+    return start.strftime("%Y-%m-%d")
+
+
 def check_budget_alerts(transactions, budgets):
     alerts = []
     
-    today = datetime.now().strftime("%Y-%m-%d")
     for b in budgets:
         if not b.enabled:
             continue
         
         if b.period == "daily":
-            continue
+            daily_spent = {}
+            for t in transactions:
+                if t.category != b.category:
+                    continue
+                daily_spent[t.date] = daily_spent.get(t.date, 0) + t.amount
+            for date, spent in daily_spent.items():
+                if spent > b.threshold:
+                    alerts.append({
+                        "type": "budget",
+                        "category": b.category,
+                        "period": "daily",
+                        "date": date,
+                        "spent": spent,
+                        "threshold": b.threshold,
+                        "message": f"Budget Overspending: {b.category} spent ${spent:.2f} on {date}, exceeding the daily budget of ${b.threshold:.2f}"
+                    })
         
-        if b.period == "weekly":
-            dt = datetime.now()
-            start = (dt - timedelta(days=dt.weekday())).strftime("%Y-%m-%d")
-            end = today
+        elif b.period == "weekly":
+            weekly_spent = {}
+            for t in transactions:
+                if t.category != b.category:
+                    continue
+                week_start = get_week_start(t.date)
+                weekly_spent[week_start] = weekly_spent.get(week_start, 0) + t.amount
+            for week_start, spent in weekly_spent.items():
+                if spent > b.threshold:
+                    alerts.append({
+                        "type": "budget",
+                        "category": b.category,
+                        "period": "weekly",
+                        "week_start": week_start,
+                        "spent": spent,
+                        "threshold": b.threshold,
+                        "message": f"Budget Overspending: {b.category} in week starting {week_start} spent ${spent:.2f}, exceeding the weekly budget of ${b.threshold:.2f}"
+                    })
+        
         elif b.period == "monthly":
-            start = datetime.now().replace(day=1).strftime("%Y-%m-%d")
-            end = today
-        else:
-            continue
-        
-        spent = get_spent_in_period(transactions, b.category, start, end)
-        if spent > b.threshold:
-            alerts.append({
-                "type": "budget",
-                "category": b.category,
-                "period": b.period,
-                "spent": spent,
-                "threshold": b.threshold,
-                "message": f"Budget Overspending: {b.category} this{b.period} has spent ${spent:.2f}, exceeding the budget of ${b.threshold:.2f}"
-            })
-    
-    for b in budgets:
-        if not b.enabled or b.period != "daily":
-            continue
-        
-        daily_spent = {}
-        for t in transactions:
-            if t.category != b.category:
-                continue
-            daily_spent[t.date] = daily_spent.get(t.date, 0) + t.amount
-        
-        for date, spent in daily_spent.items():
-            if spent > b.threshold:
-                alerts.append({
-                    "type": "budget",
-                    "category": b.category,
-                    "period": "daily",
-                    "date": date,
-                    "spent": spent,
-                    "threshold": b.threshold,
-                    "message": f"Budget Overspending: {b.category} spent ${spent:.2f} on {date}, exceeding the daily budget of ${b.threshold:.2f}"
-                })
+            monthly_spent = {}
+            for t in transactions:
+                if t.category != b.category:
+                    continue
+                month_key = t.date[:7]
+                monthly_spent[month_key] = monthly_spent.get(month_key, 0) + t.amount
+            for month_key, spent in monthly_spent.items():
+                if spent > b.threshold:
+                    alerts.append({
+                        "type": "budget",
+                        "category": b.category,
+                        "period": "monthly",
+                        "month": month_key,
+                        "spent": spent,
+                        "threshold": b.threshold,
+                        "message": f"Budget Overspending: {b.category} in {month_key} spent ${spent:.2f}, exceeding the monthly budget of ${b.threshold:.2f}"
+                    })
     
     return alerts
 
