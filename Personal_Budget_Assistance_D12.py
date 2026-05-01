@@ -49,10 +49,25 @@ def load_transactions():
     return transactions
 
 
+def is_valid_date(date_str):
+    try:
+        datetime.strptime(date_str, "%Y-%m-%d")
+        return True
+    except ValueError:
+        return False
+
+
 def add_transaction(transactions):
     print("\n--- Adding Transaction ---")
-    try:
+    
+    while True:
         date = input("Date (YYYY-MM-DD): ")
+        if is_valid_date(date):
+            break
+        else:
+            print("Invalid date format or non-existent date. Please use YYYY-MM-DD (e.g., 2006-10-09).")
+    
+    try:
         amount = float(input("Amount: "))
         category = input("Category (food, transport, shopping, etc.): ")
         description = input("Description: ")
