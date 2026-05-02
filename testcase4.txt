@@ -13,9 +13,43 @@
 Please select an option: 3
 
 --- Adding Budget Rule ---
-Category: misc 
+Category: food 
 Period (daily/weekly/monthly): monthly
-Budget Limit: 500
+Budget Limit: 600
+Budget rule added.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 3
+
+--- Adding Budget Rule ---
+Category: transport
+Period (daily/weekly/monthly): daily
+Budget Limit: 20
+Budget rule added.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 3
+
+--- Adding Budget Rule ---
+Category: entertainment
+Period (daily/weekly/monthly): weekly
+Budget Limit: 100
 Budget rule added.
 1. Add Transaction
 2. View All Transactions
@@ -30,10 +64,177 @@ Budget rule added.
 Please select an option: 1
 
 --- Adding Transaction ---
-Date (YYYY-MM-DD): 2026-05-03
-Amount: 1200
-Category (food, transport, shopping, etc.): misc
-Description: laptop repair
+Date (YYYY-MM-DD): 2025-05-02
+Amount: 300
+Category (food, transport, shopping, etc.): food
+Description: dinner
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2025-05-02
+Amount: 15
+Category (food, transport, shopping, etc.): transport
+Description: bus
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2025-05-03
+Amount: 100
+Category (food, transport, shopping, etc.): entertainment
+Description: movie
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2025-05-03
+Amount: 200
+Category (food, transport, shopping, etc.): food
+Description: lunch
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2025-05-03
+Amount: 20.5
+Category (food, transport, shopping, etc.): transport
+Description: MTR
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2025-05-12
+Amount: 58
+Category (food, transport, shopping, etc.): entertainment
+Description: gacha
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2025-05-20
+Amount: 120
+Category (food, transport, shopping, etc.): entertainment
+Description: games
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2025-05-21
+Amount: 56
+Category (food, transport, shopping, etc.): food
+Description: lunch
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 2
+
+--- All Transactions ---
+Date         Amount     Category        Description                   
+----------------------------------------------------------------------
+2025-05-02   $  300.00  food            dinner                        
+2025-05-02   $   15.00  transport       bus                           
+2025-05-03   $  100.00  entertainment   movie                         
+2025-05-03   $  200.00  food            lunch                         
+2025-05-03   $   20.50  transport       MTR                           
+2025-05-12   $   58.00  entertainment   gacha                         
+2025-05-20   $  120.00  entertainment   games                         
+2025-05-21   $   56.00  food            lunch                         
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2025-05-29
+Amount: 1000
+Category (food, transport, shopping, etc.): entertainment
+Description: PS5
 Transaction added and saved.
 1. Add Transaction
 2. View All Transactions
@@ -48,8 +249,30 @@ Transaction added and saved.
 Please select an option: 6
 
 --- Budget Alerts ---
-Budget Overspending: misc in 2026-05 spent $1200.00, exceeding the monthly budget of $500.00
-Spending Percentage Too High: misc accounts for 100.0% of total spending, exceeding the 30% threshold
+Budget Overspending: transport spent $20.50 on 2025-05-03, exceeding the daily budget of $20.00
+Budget Overspending: entertainment in week starting 2025-05-19 spent $120.00, exceeding the weekly budget of $100.00
+Budget Overspending: entertainment in week starting 2025-05-26 spent $1000.00, exceeding the weekly budget of $100.00
+Spending Percentage Too High: entertainment accounts for 68.4% of total spending, exceeding the 30% threshold
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 5
+
+--- Transaction Summary ---
+Total Transactions: 9
+Total Spending: $1869.50
+
+By Category:
+  food: $556.00 (29.7%)
+  transport: $35.50 (1.9%)
+  entertainment: $1278.00 (68.4%)
 1. Add Transaction
 2. View All Transactions
 3. Add Budget Rule
@@ -67,10 +290,41 @@ Please select an option: 7
 Select transaction to delete:
 No.   Date         Amount     Category        Description                   
 ---------------------------------------------------------------------------
-1     2026-05-03   $ 1200.00  misc            laptop repair                 
+1     2025-05-02   $  300.00  food            dinner                        
+2     2025-05-02   $   15.00  transport       bus                           
+3     2025-05-03   $  100.00  entertainment   movie                         
+4     2025-05-03   $  200.00  food            lunch                         
+5     2025-05-03   $   20.50  transport       MTR                           
+6     2025-05-12   $   58.00  entertainment   gacha                         
+7     2025-05-20   $  120.00  entertainment   games                         
+8     2025-05-21   $   56.00  food            lunch                         
+9     2025-05-29   $ 1000.00  entertainment   PS5                           
 
-Enter the number of the transaction to delete (0 to cancel): 1
-Deleted transaction: 2026-05-03 $1200.00 - laptop repair
+Enter the number of the transaction to delete (0 to cancel): 9
+Deleted transaction: 2025-05-29 $1000.00 - PS5
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 2
+
+--- All Transactions ---
+Date         Amount     Category        Description                   
+----------------------------------------------------------------------
+2025-05-02   $  300.00  food            dinner                        
+2025-05-02   $   15.00  transport       bus                           
+2025-05-03   $  100.00  entertainment   movie                         
+2025-05-03   $  200.00  food            lunch                         
+2025-05-03   $   20.50  transport       MTR                           
+2025-05-12   $   58.00  entertainment   gacha                         
+2025-05-20   $  120.00  entertainment   games                         
+2025-05-21   $   56.00  food            lunch                         
 1. Add Transaction
 2. View All Transactions
 3. Add Budget Rule
@@ -84,22 +338,13 @@ Deleted transaction: 2026-05-03 $1200.00 - laptop repair
 Please select an option: 5
 
 --- Transaction Summary ---
-Total Transactions: 0
-Total Spending: $0.00
-1. Add Transaction
-2. View All Transactions
-3. Add Budget Rule
-4. View Budget Rules
-5. Show Spending Summary
-6. View Alerts
-7. Delete Transaction
-8. Delete Budget Rule
-0. Quit
-==================================================
-Please select an option: 6
+Total Transactions: 8
+Total Spending: $869.50
 
---- Budget Alerts ---
-No alerts triggered. Everything is good!
+By Category:
+  food: $556.00 (63.9%)
+  transport: $35.50 (4.1%)
+  entertainment: $278.00 (32.0%)
 1. Add Transaction
 2. View All Transactions
 3. Add Budget Rule
