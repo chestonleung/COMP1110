@@ -1,4 +1,4 @@
-# Testcases for Personal Budget Assistant
+# System Testcases for Personal Budget Assistant
 
 ## Remarks
 **Please reset the system after each test.**
