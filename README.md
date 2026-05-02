@@ -21,6 +21,10 @@ Personal Budget Assistant is a command-line application that helps users manage 
 
 - **budgets.txt** - Data file storing all budget rules (created automatically)
   - Format: `category|period|threshold|enabled`
+ 
+- **systestcases.md** - File containing instructions for system testing
+
+- **unittestcases.md** - File containing instructions for unit testing different features
 
 ## Features
 
