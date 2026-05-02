@@ -1,0 +1,179 @@
+// Testcase 1
+
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 3
+
+--- Adding Budget Rule ---
+Category: food
+Period (daily/weekly/monthly): daily
+Budget Limit: 50
+Budget rule added.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 4
+
+--- Budget Rules ---
+food | daily | Limit $50.00 | Activated
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2026-05-02
+Amount: 35
+Category (food, transport, shopping, etc.): food 
+Description: lunch
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2026-05-03
+Amount: 25
+Category (food, transport, shopping, etc.): food 
+Description: snack
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 6
+
+--- Budget Alerts ---
+Spending Percentage Too High: food accounts for 100.0% of total spending, exceeding the 30% threshold
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2026-05-02
+Amount: 15
+Category (food, transport, shopping, etc.): food
+Description: snack
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 6
+
+--- Budget Alerts ---
+Spending Percentage Too High: food accounts for 100.0% of total spending, exceeding the 30% threshold
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2026-05-02
+Amount: 40 
+Category (food, transport, shopping, etc.): food
+Description: dinner
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 6
+
+--- Budget Alerts ---
+Budget Overspending: food spent $90.00 on 2026-05-02, exceeding the daily budget of $50.00
+Spending Percentage Too High: food accounts for 100.0% of total spending, exceeding the 30% threshold
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 2
+
+--- All Transactions ---
+Date         Amount     Category        Description                   
+----------------------------------------------------------------------
+2026-05-02   $   35.00  food            lunch                         
+2026-05-03   $   25.00  food            snack                         
+2026-05-02   $   15.00  food            snack                         
+2026-05-02   $   40.00  food            dinner                        
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 0
+All data saved. Goodbye!

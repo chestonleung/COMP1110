@@ -1,0 +1,114 @@
+// Testcase 4
+
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 3
+
+--- Adding Budget Rule ---
+Category: misc 
+Period (daily/weekly/monthly): monthly
+Budget Limit: 500
+Budget rule added.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2026-05-03
+Amount: 1200
+Category (food, transport, shopping, etc.): misc
+Description: laptop repair
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 6
+
+--- Budget Alerts ---
+Budget Overspending: misc in 2026-05 spent $1200.00, exceeding the monthly budget of $500.00
+Spending Percentage Too High: misc accounts for 100.0% of total spending, exceeding the 30% threshold
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 7
+
+--- Delete Transaction ---
+
+Select transaction to delete:
+No.   Date         Amount     Category        Description                   
+---------------------------------------------------------------------------
+1     2026-05-03   $ 1200.00  misc            laptop repair                 
+
+Enter the number of the transaction to delete (0 to cancel): 1
+Deleted transaction: 2026-05-03 $1200.00 - laptop repair
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 5
+
+--- Transaction Summary ---
+Total Transactions: 0
+Total Spending: $0.00
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 6
+
+--- Budget Alerts ---
+No alerts triggered. Everything is good!
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 0
+All data saved. Goodbye!

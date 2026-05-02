@@ -1,0 +1,237 @@
+// Testcase 3
+
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 3
+
+--- Adding Budget Rule ---
+Category: entertainment
+Period (daily/weekly/monthly): weekly
+Budget Limit: 400
+Budget rule added.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2025-05-02
+Amount: 120
+Category (food, transport, shopping, etc.): cinema
+Description: cinema
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 7
+
+--- Delete Transaction ---
+
+Select transaction to delete:
+No.   Date         Amount     Category        Description                   
+---------------------------------------------------------------------------
+1     2025-05-02   $  120.00  cinema          cinema                        
+
+Enter the number of the transaction to delete (0 to cancel): 1
+Deleted transaction: 2025-05-02 $120.00 - cinema
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2026-05-02
+Amount: 120
+Category (food, transport, shopping, etc.): entertainment 
+Description: cinema
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2026-05-12
+Amount: 350
+Category (food, transport, shopping, etc.): entertainment
+Description: concert
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 6
+
+--- Budget Alerts ---
+Spending Percentage Too High: entertainment accounts for 100.0% of total spending, exceeding the 30% threshold
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 4
+
+--- Budget Rules ---
+entertainment | weekly | Limit $400.00 | Activated
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 1
+
+--- Adding Transaction ---
+Date (YYYY-MM-DD): 2026-05-14 
+Amount: 120
+Category (food, transport, shopping, etc.): entertainment
+Description: live band show
+Transaction added and saved.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 5
+
+--- Transaction Summary ---
+Total Transactions: 3
+Total Spending: $590.00
+
+By Category:
+  entertainment: $590.00 (100.0%)
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 6
+
+--- Budget Alerts ---
+Budget Overspending: entertainment in week starting 2026-05-11 spent $470.00, exceeding the weekly budget of $400.00
+Spending Percentage Too High: entertainment accounts for 100.0% of total spending, exceeding the 30% threshold
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 8
+
+--- Delete Budget Rule ---
+
+Select budget rule to delete:
+No.   Category        Period     Limit      Status    
+-------------------------------------------------------
+1     entertainment   weekly     $400.00    Activated 
+
+Enter the number of the budget rule to delete (0 to cancel): 1
+Deleted budget rule: entertainment | weekly | $400.00
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 3
+
+--- Adding Budget Rule ---
+Category: entertainment
+Period (daily/weekly/monthly): weekly
+Budget Limit: 1000
+Budget rule added.
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 6
+
+--- Budget Alerts ---
+Spending Percentage Too High: entertainment accounts for 100.0% of total spending, exceeding the 30% threshold
+1. Add Transaction
+2. View All Transactions
+3. Add Budget Rule
+4. View Budget Rules
+5. Show Spending Summary
+6. View Alerts
+7. Delete Transaction
+8. Delete Budget Rule
+0. Quit
+==================================================
+Please select an option: 0
+All data saved. Goodbye!
