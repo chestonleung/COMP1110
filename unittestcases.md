@@ -106,20 +106,7 @@ Date         Amount     Category    Description
 2020-10-02   $ 7.50     transport   mtr
 ```
 
-## 2.2. Long inputs
-Input:
-```text
-2
-```
-
-Intended output:
-```text
-All Transactions
-Date         Amount     Category               Description
-2020-10-01   $ 200.00   supercalifragilistic   eating
-```
-
-## 2.3. No transaction records
+## 2.2. No transaction records
 In your terminal, after navigating to the project directory, input:
 ```bash
 make clean
