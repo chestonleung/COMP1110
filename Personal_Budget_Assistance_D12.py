@@ -94,6 +94,34 @@ def view_transactions(transactions):
         print(f"{t.date:<12} ${t.amount:>8.2f}  {t.category:<15} {t.description:<30}")
 
 
+def delete_transaction(transactions):
+    print("\n--- Delete Transaction ---")
+    if not transactions:
+        print("No transaction records found.")
+        return
+    
+    print("\nSelect transaction to delete:")
+    print(f"{'No.':<5} {'Date':<12} {'Amount':<10} {'Category':<15} {'Description':<30}")
+    print("-" * 75)
+    for i, t in enumerate(transactions, start=1):
+        print(f"{i:<5} {t.date:<12} ${t.amount:>8.2f}  {t.category:<15} {t.description:<30}")
+    
+    try:
+        choice = int(input("\nEnter the number of the transaction to delete (0 to cancel): "))
+        if choice == 0:
+            print("Deletion cancelled.")
+            return
+        if 1 <= choice <= len(transactions):
+            removed = transactions.pop(choice - 1)
+            save_transactions(transactions)
+            print(f"Deleted transaction: {removed.date} ${removed.amount:.2f} - {removed.description}")
+        else:
+            print("Invalid number. Deletion cancelled.")
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+
+
+
 # ============================================================
 # Budget
 # ============================================================
@@ -169,6 +197,34 @@ def view_budgets(budgets):
     for b in budgets:
         status = "Activated" if b.enabled else "Deactivated"
         print(f"{b.category} | {b.period} | Limit ${b.threshold:.2f} | {status}")
+
+
+def delete_budget(budgets):
+    print("\n--- Delete Budget Rule ---")
+    if not budgets:
+        print("No budget rules found.")
+        return
+    
+    print("\nSelect budget rule to delete:")
+    print(f"{'No.':<5} {'Category':<15} {'Period':<10} {'Limit':<10} {'Status':<10}")
+    print("-" * 55)
+    for i, b in enumerate(budgets, start=1):
+        status = "Activated" if b.enabled else "Deactivated"
+        print(f"{i:<5} {b.category:<15} {b.period:<10} ${b.threshold:<9.2f} {status:<10}")
+    
+    try:
+        choice = int(input("\nEnter the number of the budget rule to delete (0 to cancel): "))
+        if choice == 0:
+            print("Deletion cancelled.")
+            return
+        if 1 <= choice <= len(budgets):
+            removed = budgets.pop(choice - 1)
+            save_budgets(budgets)
+            print(f"Deleted budget rule: {removed.category} | {removed.period} | ${removed.threshold:.2f}")
+        else:
+            print("Invalid number. Deletion cancelled.")
+    except ValueError:
+        print("Invalid input. Please enter a number.")
 
 
 # ============================================================
@@ -387,15 +443,14 @@ def main():
     budgets = load_budgets()
 
     while True:
-        print("\n" + "="*50)
-        print("       Personal Budget Assistant")
-        print("="*50)
         print("1. Add Transaction")
         print("2. View All Transactions")
         print("3. Add Budget Rule")
         print("4. View Budget Rules")
         print("5. Show Spending Summary")
         print("6. View Alerts")
+        print("7. Delete Transaction")
+        print("8. Delete Budget Rule")
         print("0. Quit")
         print("="*50)
         choice = input("Please select an option: ")
@@ -417,6 +472,10 @@ def main():
             save_budgets(budgets)
             print("All data saved. Goodbye!")
             break
+        elif choice == "7":
+            delete_transaction(transactions)
+        elif choice == "8":
+            delete_budget(budgets)
         else:
             print("Invalid input, please try again")
 
