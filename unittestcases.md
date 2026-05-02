@@ -1,5 +1,6 @@
 # Unit Test Cases
-
+**Note**: Many of these test cases rely on some previous code that is not shown explicitly in the test cases.
+For a more comprehensive usage of the system, please refer to ```systestcases.md```.
 
 # 1. Adding transactions
 
